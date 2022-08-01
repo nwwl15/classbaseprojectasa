@@ -1,0 +1,36 @@
+{% load static %}
+
+<div class="main-one-con">
+    <ul>
+        <li> <i class="bi bi-bank"></i> <a href="{% url 'room' user.id %}" class="main-lef">dashboard</a></li>
+        <li><i class="bi bi-ui-checks"></i><a href="" class="main-lef">  KYC verification</a></li>
+        <span class="hidee-con">
+        <li><i class="bi bi-wallet2"></i><a href="" class="main-lef">  account </a> <i class="bi bi-chevron-down"></i> </li>
+            <div class="hiddenc">
+                <li><a href="{% static 'html/depsite.html">deposite</a></li>
+                <li><a href="">withdraw fund</a></li>
+                <li><a href="{% url 'pending_payment' user.id %}">pending fund</a></li>
+                
+            </div></span>
+            <span class="hidee-con">
+            <li> <i class="bi bi-graph-up"></i> <a href="" class="main-lef">subscription plans</i> </a>  <i class="bi bi-chevron-down"></i></li>
+                <div class="hiddenc">
+                    <li><a href="">your active subscription plan</a></li>
+                    <li><a href="">more subscription </a></li>
+                    
+                </div></span>
+           <li><i class="bi bi-person"></i><a href="" class="main-lef">  service</a></li>
+                <li><i class="bi bi-megaphone"></i><a href=""  class="main-lef"> notification </a></li>
+                <span class="hidee-con">
+                    <li><i class="bi bi-gear"></i> <a href="" class="main-lef"> setting   </a> <i class="bi bi-chevron-down"></i></li>
+                            <div class="hiddenc">
+                                <li><a href="{% url 'profile' user.id %}">profile</a></li>
+                                <li><a href="">account sercurity</a></li>
+                                <li><a href="">refer and earn </a></li>
+                                <li><a href="{% url 'logoutuser' %}">Logout</a></li>
+                                
+                                
+                            </div>
+                       </span>
+            </ul>
+</div>

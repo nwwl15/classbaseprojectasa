@@ -1,0 +1,190 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/dsahboards.css' %}">
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
+{% endblock link %}
+
+
+{% block content %}
+<div class=" main-two-con">
+    <div class="top-welcome">
+        <h2 >HOME <i class="bi bi-arrow-right"></i> welcome {{request.user.username}}</h2>
+
+        {% for usercon_kyc in usercon_kyc %}
+        {% if not usercon_kyc %}
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">verify your account by submitting your KYC</h4>
+        {% else %}
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">your account have been verified</h4>
+        {% endif %}
+        {% endfor %}
+        {% for usercon_kyc in usercon_kyc %}
+        {% if usercon_kyc.submited == False %}
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">verify your account by submitting your KYC</h4>
+        {% else %}
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">your account have been verified</h4>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <marquee behavior="scroll" direction="left"> welcome to GT-INVEST be free to conplain to us. on our customer service center for problem , our team will make sure to attend to it within 24hour</marquee>
+    <div>
+        <main class="BALANCE">
+            {% if usercon %}
+            {% for userincome in usercon %}
+            <div class="main-balace">
+
+            <div class="main-main-w">
+             <span>earnings</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                    <h1>USD  <b>{{userincome.withdrawal}}.00</b></h1>
+            <strong>withdrawable</strong>   
+            </div>
+     
+         </div>
+            <div class="main-main-w">
+             <span style="color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0.274);">active deposite</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                       <h1>USD <b>{{userincome.non_withdrawal}}.00</b></h1>
+            <strong>locked</strong> 
+            </div>
+    
+         </div>
+         <div class="bbv09x ">
+             {% for usercon_kyc in usercon_kyc %}
+            {% if usercon_kyc.submited == False %}
+            <div class="bbv09">
+
+
+           <h4>
+            
+               submite your KYC for verifications and for account activations 
+           </h4>
+
+           <button style="background-color: red; color: white;">submite now !!</button>
+        </div>
+     
+        {% endif %}
+        {% endfor %}
+
+            <div class="bbv09">
+<h2>setup your payment</h2>
+           <h4>
+            
+              please add a mode of payment in your setting for ease at transcatting
+           </h4>
+           <button style="background-color: red; color: white;">setup now</button>
+        </div>
+            <div class="bbv09">
+
+           
+            <h4>refer and earn 10% 5% 3% 2% 1%</h4>
+            <h6>your referral link: 
+                <br><a href="">http://GT-invest.com/98887t5645r57</a>
+
+            </h6>
+            <input type="text" name="" id="" placeholder="enter the email address you want refer">
+            <button>invite friend</button>
+        </div>
+            <div class="bbv09 ts-history">
+
+           
+           <BIG class="main0pay">
+               <big class="pay-main0pay">
+            <h4>
+                earning history
+            </h4>
+            <a href="" style="color: red;">detail history </a>
+            </big>
+            <div style="display: flex; width: 100%; justify-content: space-between; font-size: smaller; border-bottom:1px solid rgb(25, 81, 184); padding-bottom: 12px;padding-top: 12px;">
+              <b style="color: black;">TXN </b>
+              <b style="color: black;">amount(USD) </b>
+              <b style="color: black;">date </b>
+            </div>
+
+           </BIG>
+        </div>
+         </div>
+        </div>
+        
+        {% endfor %}
+        {% else %}
+        <div class="main-balace">
+
+            <div class="main-main-w">
+             <span>earnings</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                    <h1>USD  <b>0.00</b></h1>
+            <strong>withdrawable</strong>   
+            </div>
+     
+         </div>
+            <div class="main-main-w">
+             <span style="color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0.274);">active deposite</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                       <h1>USD <b>0.00</b></h1>
+            <strong>locked</strong> 
+            </div>
+    
+         </div>
+         <div class="bbv09x ">
+
+         
+            <div class="bbv09">
+
+           <h4>
+            
+               submite your KYC for verifications and for account activations 
+           </h4>
+           <button style="background-color: red; color: white;">submite now !!</button>
+        </div>
+            <div class="bbv09">
+<h2>setup your payment</h2>
+           <h4>
+            
+              please add a mode of payment in your setting for ease at transcatting
+           </h4>
+           <button style="background-color: red; color: white;">setup now</button>
+        </div>
+        <div class="bbv09">
+
+       
+        <h4>refer and earn 10% 5% 3% 2% 1%</h4>
+        <h6>your referral link: 
+            <br><a href="">http://GT-invest.com/98887t5645r57</a>
+
+        </h6>
+        <input type="text" name="" id="" placeholder="enter the email address you want refer">
+        <button>invite friend</button>
+    </div>
+       
+            <div class="bbv09 ts-history">
+
+           
+           <BIG class="main0pay">
+               <big class="pay-main0pay">
+            <h4>
+                earning history
+            </h4>
+            <a href="" style="color: red;">detail history </a>
+            </big>
+            <div style="display: flex; width: 100%; justify-content: space-between; font-size: smaller; border-bottom:1px solid rgb(25, 81, 184); padding-bottom: 12px;padding-top: 12px;">
+              <b style="color: black;">TXN </b>
+              <b style="color: black;">amount(USD) </b>
+              <b style="color: black;">date </b>
+            </div>
+
+           </BIG>
+        </div>
+         </div>
+        </div>
+        {% endif %}
+        </main>
+    </div>
+</div>
+{% endblock content %}

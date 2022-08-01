@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/bootstrap-icons-1.8.3/bootstrap-icons.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <section>
+        <div class="main-con">
+     
+            <center> GT -invest</center>
+            <span class="res">
+                <h2>REGISTER</h2>
+                <i class="bi bi-arrow-right"></i>
+            </span>
+            <form action="" method="post">
+                {% for messages in messages %}
+                <small style="font-size: medium; color: red;">{{messages}}</small>
+                       {% endfor %}
+                {% csrf_token %}
+
+                <span>
+                    <input type="text" name="username" id="" placeholder=" Username ">
+                    <i class="bi bi-person lo-icon"></i>
+                    
+                </span>
+                <span>
+                    <input type="email" name="email" id="" placeholder="E-mail">
+
+                </span>
+                <span>
+                    <input type="password" name="password" id="" placeholder="Password">
+                    <i class="bi bi-key lo-icon"></i>
+                </span>
+                <span>
+                    <input type="password" name="password2" id="" placeholder="confirm- Password">
+                    <i class="bi bi-key lo-icon"></i>
+                </span>
+                <big class="btn-sub">
+                    <input type="submit" value="submit">
+                </big>
+                <strong>Already a  User?<a href="{% url 'loginuser' %}" style="color: rgba(255, 0, 0, 0.664); font-size: larger;">   Login</a></strong> 
+            </form>
+
+        </div>
+    </section>
+</body>
+</html>

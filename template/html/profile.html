@@ -1,0 +1,88 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+
+                
+                
+                {% block link %}
+  
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+    {% endblock link %}
+    {% block content %}
+<div class=" main-two-con">
+    
+    {% if usercon %}
+    {% for usercon in usercon %}
+
+ 
+    <main>
+
+
+
+
+        <div class="main-two-con-child-one">
+    
+          
+      
+    {% if usercon.profile_pic %}
+        
+        <span>
+            <img src="{{usercon.profile_pic.url}}" alt="" class="profile">
+        </span>
+        {% else %}
+        <span>
+            <img src="{% static 'asset/logos/avatar_generic_118.png '%}" alt="" class="profile">
+        </span>
+        {% endif %}
+        <div class="main-two-con-child-one-we">
+            <h3 style="font-weight: lighter;">{{request.user.username}}</h3>
+            <b style="font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{usercon.user.email}}</b>
+            <strong style="border-bottom: 2px solid white; padding-bottom:7px ;"> <a href=""><i class="bi bi-gear"></i> change your profile pic</a></strong>
+        </div>
+    
+        </div>
+        <div class="main-two-con-child-two">
+            <div class="main-two-con-child-two-con-one">
+                <form action="" method="get">
+                    <big style="width: 270%;">
+                       <span>
+                        <label for="Username">Username</label>
+                        <input type="text" name="Username" id="Username" placeholder="Username">
+                    </span>
+                     
+                    <span>
+                        <label for="lastname">referral code</label>
+                        <H3>{{usercon.code}}</H3>
+                    </span>   
+                    </big>
+                  
+                    <span>
+                        <label for="email">email</label>
+                        <input type="email" id="email" placeholder="Email">
+                    </span>
+                    <span>
+                        <label for="number">number</label>
+                        <input type="number" id="number" placeholder="phone number">
+                    </span>
+                    <span>
+                        <button>submite</button>
+                    </span>
+                </form>
+            </div>
+            <div class="main-two-con-child-two-con-two">
+                <ul>
+                    <a href="" class="link-hover">My profile</a>
+                    <a href="">Payment account</a>
+                    <a href="">sercurity</a>
+                </ul>
+            </div>
+        </div>
+    </main>
+    {% endfor %}
+    {% else %}
+    {% endif %}
+</div>
+   
+    {% endblock content %}

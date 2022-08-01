@@ -1,0 +1,99 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+    
+    {% block link %}
+    <link rel="stylesheet" href="{% static 'css/pend_approval_fund.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <script src="{% static '/js/dashboard.js' %}"></script>
+    {% endblock link %}
+
+    {% block content %}
+
+<div class=" main-two-con">
+    <div class="top-welcome">
+        <h2 >pending <i class="bi bi-arrow-right"></i> Funds</h2>
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">verify your account by submitting your KYC</h4>
+    </div>
+    <marquee behavior="scroll" direction="left"> welcome to GT-INVEST be free to conplain to us. on our customer service center for problem , our team will make sure to attend to it within 24hour</marquee>
+    <div style="height: auto;">
+        <main class="BALANCE">
+            <div class="main-balace">
+
+            <div class="main-main-w">
+             <span>active deposite</span>
+            <i class="bi bi-wallet2"></i>
+            <div class="bigx">
+                    <h1>USD  <b>1000.00</b></h1>
+            <strong>locked deposite</strong>   
+            </div>
+     
+         </div>
+            <div class="main-main-w">
+             <span>inactive deposite</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                    <h1 style="width: 100%;">USD<b>0.00</b></h1>
+            <strong>inactive deposite</strong>   
+            </div>
+     
+         </div>
+          
+        
+        </div>
+        </main>
+        <div class="dp-pending">
+            <div class="dp-pending-con fd">
+
+                <big>transcation id</big>
+                <big>amount </big>
+                <big>created on </big>
+                <big>maturity date </big>
+                <big>status </big>
+            </div>
+        
+            <div class="dp-pending-con rd">
+
+                <big>xGHcXg </big>
+                <big>USD 1000.00 </big>
+                <big>02 sep 2022 20:23</big>
+                <big> 2022-09-7 20:23:52</big>
+                <big>pending mautrity </big>
+            </div>
+            <div class="dp-pending-con rd">
+
+                <big>xGHcXg </big>
+                <big>USD 1000.00 </big>
+                <big>02 sep 2022 20:23</big>
+                <big> 2022-09-7 20:23:52</big>
+                <big>pending approval </big>
+            </div>
+            <div class="dp-pending-con rd">
+
+                <big>xGHcXg </big>
+                <big>USD 1000.00 </big>
+                <big>02 sep 2022 20:23</big>
+                <big> 2022-09-7 20:23:52</big>
+                <big>pending approval </big>
+            </div>
+            <div class="dp-pending-con rd">
+
+                <big>xGHcXg </big>
+                <big>USD 1000.00 </big>
+                <big>02 sep 2022 20:23</big>
+                <big> 2022-09-7 20:23:52</big>
+                <big>pending approval </big>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    </section>
+</div>
+
+    
+
+
+   
+
+    {% endblock content %}

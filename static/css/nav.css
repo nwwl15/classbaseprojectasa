@@ -1,0 +1,17 @@
+.logo-con{
+    width: 12rem;
+    font-size: 90px;
+    height: 120%;
+    /* padding: 4px; */
+    /* margin-left: 34px; */
+    /* object-fit: contain; */
+    
+    
+}.logo-img{
+    height: 100%;
+    font-size: 90px;
+
+    /* background-color: #fffff000; */
+        width:100%;
+        object-fit: contain;
+    }

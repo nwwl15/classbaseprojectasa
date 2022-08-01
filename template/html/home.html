@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="read moreport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/homeS.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-icons-1.8.3/bootstrap-icons.css' %}">
+</head>
+<body>
+    <section class="anin">
+        <main class="anin-con">
+         <div class="sx"></div>
+        <div class="sx2"></div>
+        <div class="sx"></div>   
+         <div class="sx2"></div>
+        <div class="sx"></div>
+        <div class="sx2"></div>   
+        <div class="sx"></div>
+        
+        </main>
+        
+        
+        </section>
+<section class="header-top">
+    <div >
+
+        <ul >
+            <li><a href=""  style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> <i class="bi bi-phone"style="margin-left: 1.2em; color: white;"></i>contact</a></li>
+            <li><a href="" style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> <i class="bi bi-map" style="margin-left: 1.2em; color: white;"></i>service</a></li>
+            
+        </ul>
+   <ul >
+    <span class="icon-f-sec-8">
+        <i class="bi bi-twitter seci-one"></i>
+        <i class="bi bi-whatsapp sec-8-2"></i>
+        <i class="bi bi-facebook sec-8-3"></i>
+    </span> 
+   </ul>
+    </div>
+</section>
+{% for homelogo in home_pages_ex_logo %}
+    <section class="sec-1">
+    <div class="logo-con">
+     <img src="{{homelogo.logo.url}}" alt="" class="logo-img">
+    </div>
+    <div class=" sec-1-link-con">
+<ul class="ul-sec-1-first">
+    <li><a href="">home</a></li>
+    <li><a href="#plan">plans</a></li>
+    <li><a href="">service</a></li>
+    <li><a href="">policy</a></li>
+</ul>
+<ul class="ul-sec-1-second">
+    <li><a href="{% url 'loginuser' %}">login</a></li>
+    <li class="sec2-oneli" style="border-radius: 7px; background-color: transparent;"><a href="{% url 'registeruser' %}" style="color: white;" >Rigister</a></li>
+    <i class="bi bi-justify" style="color:white; "></i>
+</ul>
+    </div>
+    </section>
+
+
+
+<section class="sec-2">
+    
+<main class="main-slide-master">
+    <div class="over-lapse-2"></div>
+<div class="main-sec-2-childe  slideone slide-show">
+    <div class="main-sec-2-slide-text  ">
+    <div class="main-sec-2-slide-text2 main-sec-2-slide-text-show">
+<h1 style="width: fit-content;">welcome to <br><dl>{{homelogo.site_name}}</dl> </h1>
+<p>Lorem ipsum dolDignissimos corporis ipsa illum iusto sint cum? Aliquid!</p>
+</div >
+</div>
+</div>
+<div class="main-sec-2-childe slidetwo  ">
+    <div class="main-sec-2-slide-text">
+    <div class="main-sec-2-slide-text2">
+        <h1>welcome to <dl>{{homelogo.site_name}}</dl></h1>
+        <p>Be free to invest with our us</p>
+        </div>
+</div>
+</div>
+<div class="main-sec-2-childe slidethree  ">
+    <div class="main-sec-2-slide-text">
+    <div class="main-sec-2-slide-text2 ">
+        <h1>We offer secure trading oppunities </h1>
+        <p>Lorem ipsum dolDignissimos corporis ipsa illum iusto sint cum? Aliquid!</p>
+        </div >
+</div>
+</div>
+<div class="main-sec-2-childe slidefour ">
+    <div class="main-sec-2-slide-text">
+    <div class="main-sec-2-slide-text2">
+        <h1><dl>{{homelogo.site_name}}</dl> is a sure place for you to invest your money </h1>
+        </div >
+</div>
+</div>
+
+
+
+
+</main>
+
+
+</section>
+
+<section class="sec-3">
+   <small  >
+       <h1 style="width: 100%; margin-bottom: .1%;">welcome to<d style="margin: 9px ;">{{homelogo.site_name}}</d> <br> we can be your guide</h1>
+  <h4 >to the world of investment</h4>
+  <button style="margin-top: 1%;"> join now!!!</button>
+    </small>
+
+
+
+
+
+    <div class="mian-plan-intro">
+        <center class="main-psd"><h3>what we offer </h3></center>
+<main>
+
+<div class="mian-plan-intro-child md-lf md-top">
+<img class="ivsa"  src="{% static 'asset/image/423-4233061_capital-investment-investment-icon-png-transparent-png.png'%}" alt="">
+  <span>
+      <b><h2>invesment </h2></b>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mol</p>
+      <button>read more</button>
+    </span>
+</div>
+<div class="mian-plan-intro-child md-lf md-top">
+    <img class="ivsa"  src="{% static 'asset/image/383-3834293_return-on-investment-transistor-used-as-an-amplifier.png'%}" alt="">
+
+  <span>
+      <b><h2>planning </h2></b>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mol</p>
+      <button>read more</button>
+    </span>
+</div>
+<div class="mian-plan-intro-child md-lf md-top">
+    <img class="ivsa"  src="{% static 'asset/image/383-3834309_return-of-investment-hd-png-download.png'%}" alt="">
+  <span>
+      <b><h2>analysis  </h2></b>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mol</p>
+      <button>read more</button>
+    </span>
+</div>
+
+
+
+
+
+</main>
+
+
+
+        
+    </div>
+
+
+</section>
+
+
+<section class="sec-5-plan" id="plan">
+  <div class="header-plan">
+      <h2>inventment plans</h2>
+      <p>Say goodbuy to low interest saving acconts . Grow your wealth with profitable investment </p>
+  </div>
+<main class="plan-con">
+    <div class="main-child">
+    <span  class="md-top">
+       <h1>trial Plan</h1>
+    </span>
+    <small class="md-top">6% daily ROI for 3Days</small>
+    <strong class="md-top">minimuin deposite</strong>
+    <b class="md-top">$200.00</b>
+    <strong class="md-top">maximum deposite</strong>
+    <b class="md-top">$1000.00</b>
+    <big class="md-top">withdrawal instant</big>
+    <button class="md-top">Get started</button>
+    </div>
+    <div class="main-child">
+        <img class="label-plan" src="{% static 'asset/image/golden-label-with-ribbon-vector-14301289.jpg'%}" alt="">
+    <span class="md-top">
+       <h1>brozen</h1>
+    </span>
+    <small class="md-top">3.5% daily ROI for 7Days</small>
+    <strong class="md-top">minimuin deposite</strong>
+    <b class="md-top">$1000.00</b>
+    <strong class="md-top">maximum deposite</strong>
+    <b class="md-top">$10000.00</b>
+    <big class="md-top">withdrawal instant</big>
+    <button class="md-top">Get started</button>
+    </div>
+    <div class="main-child">
+        <img class="label-plan" src="{% static 'asset/image/golden-label-with-ribbon-vector-14301289.jpg'%}" alt="">
+
+    <span class="md-top">
+       <h1>silver</h1>
+    </span>
+    <small class="md-top">5% daily ROI for 15Days</small>
+    <strong class="md-top">minimuin deposite</strong>
+    <b class="md-top">$10000.00</b>
+    <strong class="md-top">maximum deposite</strong>
+    <b class="md-top">$20000.00</b>
+    <big class="md-top">withdrawal instant</big>
+    <button class="md-top">Get started</button>
+    </div>
+    <div class="main-child">
+    <span class="md-top">
+       <h1>gold</h1>
+    </span>
+    <small class="md-top">5% daily ROI for 30Days</small>
+    <strong class="md-top">minimuin deposite</strong>
+    <b class="md-top">$20000.00</b>
+    <strong class="md-top">maximum deposite</strong>
+    <b class="md-top">$5000000.00 or nill</b>
+    <big class="md-top">withdrawal instant</big>
+    <button class="md-top">Get started</button>
+    </div>
+  
+</main>
+
+
+</section>
+<section class="calculator-sec-7">
+<main class="main-calculator-sec-7">
+    <div class="calculator-sec-7-header">
+       <h1>
+            Welcome to <dl>{{homelogo.site_name}}</dl>
+       </h1>
+       <h3>we always know how to help you <br>find happiness</h3>
+       <p>we are experienced team of dedicated developer, trader and analysts who are invovled in helf clients to reach their goal. join us and start earn profit now!!</p>
+        <button>Get Started</button>
+    </div>
+<div class="main-claculator-con-2">
+    <h2>investment calculator</h2>
+    <flex class="main-input">
+        <span>
+            <label for="">Plan</label>
+            <select name="" id="" class="main-output">
+                
+                <option value="select plan">-------</option>
+                <option value="trial Plan">Trial Plan</option>
+                <option value="brozen">Brozen</option>
+                <option value="sliver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="">Select plan</option>
+
+            </select>
+        </span>
+        <span>
+        <label for="">Deposite Amount</label>
+        <input type="number" class="main-amount" name="" id="" placeholder="enter the amount you want to invest">
+
+        </span>
+        <span>
+        <label for="">Return</label>
+        <input type="text" name="" id="" placeholder="the interest " class="return">
+
+        </span>
+    
+
+        
+    </flex>
+</div>
+</main>
+</section>
+<center class="main-psd"><h3>conpany statistic </h3></center>
+
+<section class="statistic">
+    <div>
+        <i class="bi bi-watch"></i>
+        <h3>Running Days</h3>
+        <strong>every working days</strong>
+    </div>
+    <div>
+        <i class="bi bi-people"></i>
+        <h3>TOTAL DEPOSITE</h3>
+        <strong>$23034234.94</strong>
+    </div>
+    <div>
+        <i class="bi bi-currency-exchange"></i>
+        <h3>TOTAL DEPOSITE</h3>
+        <strong>$23034234.94</strong>
+    </div>
+    <div>
+        <i class="bi bi-pie-chart"></i>
+        <h3>TOTAL WITHDRAWAL</h3>
+        <strong>$23034234.94</strong>
+    </div>
+    
+</section>
+
+
+
+
+ <section class="sec-5">
+    <center class="main-psd   sec-topiv"><h3> top investors</h3></center>
+    <div class="main-holider-peronves">
+    <main class="main-holider-peronves2">
+        
+        <div class="main-disv-invesy">
+            <img class="mainperima" src="{% static 'asset/person/merthe_weusthuis.jpg'%}" alt="">
+
+            <b class="personinvest-detail">
+                <strong>morgan smit</strong>
+                <big> <p class="invest-country">country:</p>  USA/NEWYOKE</big>
+            </b>
+        </div>
+        <div class="main-disv-invesy">
+            <img class="mainperima" src="{% static 'asset/person/fadi_farra.jpg'%}" alt="">
+
+            <b class="personinvest-detail">
+                <strong>fadi_farra</strong>
+                <big> <p class="invest-country">country:</p>  USA/NEWYOKE</big>
+            </b>
+        </div>
+        <div class="main-disv-invesy">
+            <img class="mainperima" src="{% static 'asset/person/anthony_o_sullivan.jpg'%}" alt="">
+
+            <b class="personinvest-detail">
+                <strong>anthony_o_sullivan</strong>
+                <big> <p class="invest-country">country:</p>  USA/NEWYOKE</big>
+            </b>
+        </div>
+        <div class="main-disv-invesy">
+            <img class="mainperima" src="{% static 'asset/person/sir_christopher_pissarides.jpg'%}" alt="">
+
+            <b class="personinvest-detail">
+                <strong>anthony_o_sullivan</strong>
+                <big> <p class="invest-country">country:</p>  USA/NEWYOKE</big>
+            </b>
+        </div>
+        <div class="main-disv-invesy">
+            <img class="mainperima" src="{% static 'asset/person/tom_flynn.jpg'%}" alt="">
+
+            <b class="personinvest-detail">
+                <strong>anthony_o_sullivan</strong>
+                <big> <p class="invest-country">country:</p>  USA/NEWYOKE</big>
+            </b>
+        </div>
+    </main>
+
+
+</div>
+<div class="chevron-s">
+    <i class="bi bi-chevron-left "></i>
+    <i class="bi bi-chevron-right "></i>
+</div>
+</section>
+
+
+
+
+
+<section class="sec-6-testmonial">
+    <div class="testimonal-con">
+        <div class="ovew-lay-tesrimonal"></div>
+    <div class="testimonal-con2">
+        <div class="comma"> <b>,,</b></div>
+        <div class=" commass"> <b>,,</b></div>
+
+        <div class="main-testimonal-header">
+            <h1>Testimonials </h1>
+            <strong>WHAT THEY SAY ABOUT US</strong>
+            <P>Lorem ipsum dolor sit iste qui et praesentium eum nulla!</P>
+        </div>
+        <div class="main-person-testimonal-con">
+            <main class="main-textimonal">
+                <div class="main-pserson-testi md-rt">
+                    <img src="{% static 'asset/person/sir_christopher_pissarides.jpg'%}" alt="">
+                    <span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem temporibus ut porro debitis excepturi unde optio architecto error, nostrum, eaque delectus inventore aliquid dolores recusandae. Tenetur, vitae ne</p>
+                        <b style="border-bottom: 1px solid white;" style>Michael smite</b><br>
+                        <big>perinuim investor</big>
+                    </span>
+
+                </div>
+                <div class="main-pserson-testi md-rt">
+                    <img src="{% static 'asset/person/irina_bokova.jpg'%}" alt="">
+                    <span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem temporibus ut porro debitis excepturi unde optio architecto error, nostrum, eaque delectus inventore aliquid dolores recusandae. Tenetur, vitae ne</p>
+                        <b style="border-bottom: 1px solid white;" class="md-top">Michael smite</b><br>
+                        <big>perinuim investor</big>
+                    </span>
+
+                </div>
+                <div class="main-pserson-testi md-rt">
+                    <img src="{% static 'asset/person/anthony_o_sullivan.jpg'%}" alt="">
+                    <span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem temporibus ut porro debitis excepturi unde optio architecto error, nostrum, eaque delectus inventore aliquid dolores recusandae. Tenetur, vitae ne</p>
+                        <b style="border-bottom: 1px solid white;" class="md-top">Michael smite</b><br>
+                        <big>perinuim investor</big>
+                    </span>
+
+                </div>
+                <div class="main-pserson-testi md-rt">
+                    <img src="{% static 'asset/person/anthony_o_sullivan.jpg'%}" alt="">
+                    <span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem temporibus ut porro debitis excepturi unde optio architecto error, nostrum, eaque delectus inventore aliquid dolores recusandae. Tenetur, vitae ne</p>
+                        <b style="border-bottom: 1px solid white;" class="md-top">Michael smite</b><br>
+                        <big>perinuim investor</big>
+                    </span>
+
+                </div>
+            </main>
+        </div>
+        
+    </div>
+    </div>
+</section> 
+
+
+<section class="sec-8">
+    <main class="main-sec-8-child-1">
+        <div>
+            <small class="first-child-sec-4-d md-rt">
+               <span><h1><dl>{{homelogo.site_name}}</dl></h1></span>
+        <h2>info@{{homelogo.site_name}}.com </h2>
+        <span class="icon-f-sec-8">
+            <i class="bi bi-twitter seci-one"></i>
+            <i class="bi bi-whatsapp sec-8-2"></i>
+            <i class="bi bi-facebook sec-8-3"></i>
+        </span> 
+            </small>
+        <big class="md-lf">
+            <h3>lexinton </h3>
+            <b>124 deweese St</b>
+            <b>lexington, KY9863</b> <br>
+            <num>(654) 812-0777</num>
+        </big>
+    </div>
+    
+    <div class="main-child-xs">
+        <span>
+            <h3><dl>{{homelogo.site_name}}</dl></h3>
+                <tin>@GTinvesfinanical</tin>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias facere libero, aspernatur natus optio inventore magnam odit, architecto corrupti, assumenda impedit cupiditate harum velit ratione quasi? Sint iste voluptates id!</p>
+       <img src="{% static 'asset/image/ssd.jpg'%}" alt="" height="70%" width="100%" style="background-color: rgba(3, 14, 63, 0);">
+        </span>
+
+    </div>
+    </main>
+   <main class="main-sec-8-child-2">
+ <div class="con-sxx1">
+     <span class="sxxi onexx1">
+         <b><dl>{{homelogo.site_name}}</dl> </b>
+         <h3>9900 corperate campus <br>
+        louisville, ky 40223</h3>
+        <num>(654) 812-0777</num>
+     </span>
+     <span class="sxxi onexx2">
+         <ul>
+             <li><a href="">Privacy policy</a></li>
+             <li><a href="">Firm ADV</a></li>
+             <li><a href="">Disclosure</a></li>
+         </ul>
+
+     </span>
+ </div>
+ <span class="main-last-sec-8">
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quas aspernatur, veniam voluptatibus quae maxime neque ad ipsum. Ea sapiente veritatis quis esse maiores, sunt accusamus itaque molestiae labore dignissimos?</p>
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quas aspernatur, veniam voluptatibus quae maxime neque ad ipsum. Ea sapiente veritatis quis esse maiores, sunt accusamus itaque molestiae labore dignissimos?</p>
+ </span>
+   </main>
+</section>
+<section class="advert">
+    <div>
+        <i class="bi bi-x  advert-romver"></i>
+        <img src="{% static 'asset/image/golden-label-with-ribbon-vector-14301289.jpg'%}" alt="" style="max-height: 60%; border-radius: 23px;" width="60%">
+
+        <h5>henry isreal</h5>
+        <h3 style="text-transform: capitalize;">he has been rewarded with 12% discount  for upgrading to silver plan. </h3>
+        <h6 style="color:aliceblue; text-transform: capitalize;">upgrade now to get yours!!!</h6>
+
+    </div>
+</section>
+{% endfor %}
+
+<script src="{% static 'js/home.js'%}"></script>
+</body>
+</html>

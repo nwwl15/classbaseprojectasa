@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="header-sec-1">
+    <div class="div-one xsq">
+
+        <div class="logo-con">
+            <img src="{% static 'asset/logos/LOGO2.jpeg '%}" alt="" class="logo-img">
+           </div>
+        <i class="bi bi-text-paragraph"></i>
+        <div class="xszz">
+            <form action="" method="post">
+                <input type="text" name="" id="search" placeholder="Search for...">
+            </form>
+            <i class="bi bi-search"></i>
+        </div>
+    </div>
+<div class="div-teo xsq">
+    <b> have question? <sub>contact info@GT-invest.com</sub></b>
+    <de>
+        <i class="bi bi-bell"></i>
+        <h6>0</h6>
+    </de>
+    <de>
+        <i class="bi bi-envelope"></i>
+        <h6>1</h6>
+    </de>
+
+
+    {% if usercon.profile_pi %}
+    {% for usercon in usercon %}
+    
+    <big>
+        <img src="{{usercon.profile_pic.url}}" alt="" class="profile">
+    </big>
+    {% endfor %}
+    {% else %}
+    <big>
+        <img src="{% static 'asset/logos/avatar_generic_118.png '%}" alt="" class="profile">
+    </big>
+    {% endif %}
+</div>
+</div>

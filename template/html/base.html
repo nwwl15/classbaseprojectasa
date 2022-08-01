@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="{% static 'bootstrap-icons-1.8.3/bootstrap-icons.css' %}">
+
+    {% block link %}
+    {% endblock link %}
+    
+  
+      
+</head>
+
+<body>
+    <section class="over-all">
+{% include 'html/nav.html' %}
+<section class="xmain-consa">
+    {% include 'html/link-nave.html' %}
+
+
+    {% block content %}
+    {% endblock content %}
+
+</section>
+    </section>
+</div>
+
+    
+    <script src="{% static 'js/dashboard.js'%}"></script>
+</body>
+</html>
+
+   
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/dsahboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-icons-1.8.3/bootstrap-icons.css' %}">
+
+    
+  
+      
+</head>
+
+<body>
+    <section class="over-all">
+<div class="header-sec-1">
+    <div class="div-one xsq">
+
+        <div class="logo-con">
+            <img src="{% static 'asset/logos/LOGO2.jpeg '%}" alt="" class="logo-img">
+           </div>
+        <i class="bi bi-text-paragraph"></i>
+        <div class="xszz">
+            <form action="" method="post">
+                <input type="text" name="" id="search" placeholder="Search for...">
+            </form>
+            <i class="bi bi-search"></i>
+        </div>
+    </div>
+<div class="div-teo xsq">
+    <b> have question? <sub>contact info@GT-invest.com</sub></b>
+    <de>
+        <i class="bi bi-bell"></i>
+        <h6>0</h6>
+    </de>
+    <de>
+        <i class="bi bi-envelope"></i>
+        <h6>1</h6>
+    </de>
+
+
+    {% if usercon %}
+    {% for usercon in usercon %}
+    
+    <big>
+        <img src="{{usercon.profile_pic.url}}" alt="" class="profile">
+    </big>
+    {% endfor %}
+    {% else %}
+    <big>
+        <img src="{% static 'asset/logos/avatar_generic_118.png '%}" alt="" class="profile">
+    </big>
+    {% endif %}
+</div>
+</div>
+<section class="xmain-consa">
+<div class="main-one-con">
+    <ul>
+        <li> <i class="bi bi-bank"></i> <a href="" class="main-lef">dashboard</a></li>
+        <li><i class="bi bi-ui-checks"></i><a href="" class="main-lef">  KYC verification</a></li>
+        <span class="hidee-con">
+        <li><i class="bi bi-wallet2"></i><a href="" class="main-lef">  account </a> <i class="bi bi-chevron-down"></i> </li>
+            <div class="hiddenc">
+                <li><a href="{% static 'html/depsite.html">deposite</a></li>
+                <li><a href="">withdraw fund</a></li>
+                <li><a href="{% static 'html/pend_aproval-fund.html">pending fund</a></li>
+                
+            </div></span>
+            <span class="hidee-con">
+            <li> <i class="bi bi-graph-up"></i> <a href="" class="main-lef">subscription plans</i> </a>  <i class="bi bi-chevron-down"></i></li>
+                <div class="hiddenc">
+                    <li><a href="">your active subscription plan</a></li>
+                    <li><a href="">more subscription </a></li>
+                    
+                </div></span>
+           <li><i class="bi bi-person"></i><a href="" class="main-lef">  service</a></li>
+                <li><i class="bi bi-megaphone"></i><a href=""  class="main-lef"> notification </a></li>
+                <span class="hidee-con">
+                    <li><i class="bi bi-gear"></i> <a href="" class="main-lef"> setting   </a> <i class="bi bi-chevron-down"></i></li>
+                            <div class="hiddenc">
+                                <li><a href="">profile</a></li>
+                                <li><a href="">account sercurity</a></li>
+                                <li><a href="">refer and earn </a></li>
+                                
+                                
+                            </div>
+                       </span>
+            </ul>
+</div>
+
+<div class=" main-two-con">
+    <div class="top-welcome">
+        <h2 >HOME <i class="bi bi-arrow-right"></i> welcome {{request.user.username}}</h2>
+        {% for usercon_kyc in usercon_kyc %}
+        {% if usercon_kyc.submited == False %}
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">verify your account by submitting your KYC</h4>
+        {% else %}
+        <h4 style="border-bottom: 1px solid rgb(196, 34, 34)">your account have been verified</h4>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <marquee behavior="scroll" direction="left"> welcome to GT-INVEST be free to conplain to us. on our customer service center for problem , our team will make sure to attend to it within 24hour</marquee>
+    <div>
+        <main class="BALANCE">
+            {% if usercon %}
+            {% for userincome in usercon %}
+            <div class="main-balace">
+
+            <div class="main-main-w">
+             <span>earnings</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                    <h1>USD  <b>{{userincome.withdrawal}}.00</b></h1>
+            <strong>withdrawable</strong>   
+            </div>
+     
+         </div>
+            <div class="main-main-w">
+             <span style="color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0.274);">active deposite</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                       <h1>USD <b>{{userincome.non_withdrawal}}.00</b></h1>
+            <strong>locked</strong> 
+            </div>
+    
+         </div>
+         <div class="bbv09x ">
+             {% for usercon_kyc in usercon_kyc %}
+            {% if usercon_kyc.submited == False %}
+            <div class="bbv09">
+
+
+           <h4>
+            
+               submite your KYC for verifications and for account activations 
+           </h4>
+
+           <button style="background-color: red; color: white;">submite now !!</button>
+        </div>
+     
+        {% endif %}
+        {% endfor %}
+
+            <div class="bbv09">
+<h2>setup your payment</h2>
+           <h4>
+            
+              please add a mode of payment in your setting for ease at transcatting
+           </h4>
+           <button style="background-color: red; color: white;">setup now</button>
+        </div>
+            <div class="bbv09">
+
+           
+            <h4>refer and earn 10% 5% 3% 2% 1%</h4>
+            <h6>your referral link: 
+                <br><a href="">http://GT-invest.com/98887t5645r57</a>
+
+            </h6>
+            <input type="text" name="" id="" placeholder="enter the email address you want refer">
+            <button>invite friend</button>
+        </div>
+            <div class="bbv09 ts-history">
+
+           
+           <BIG class="main0pay">
+               <big class="pay-main0pay">
+            <h4>
+                earning history
+            </h4>
+            <a href="" style="color: red;">detail history </a>
+            </big>
+            <div style="display: flex; width: 100%; justify-content: space-between; font-size: smaller; border-bottom:1px solid rgb(25, 81, 184); padding-bottom: 12px;padding-top: 12px;">
+              <b style="color: black;">TXN </b>
+              <b style="color: black;">amount(USD) </b>
+              <b style="color: black;">date </b>
+            </div>
+
+           </BIG>
+        </div>
+         </div>
+        </div>
+        
+        {% endfor %}
+        {% else %}
+        <div class="main-balace">
+
+            <div class="main-main-w">
+             <span>earnings</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                    <h1>USD  <b>0.00</b></h1>
+            <strong>withdrawable</strong>   
+            </div>
+     
+         </div>
+            <div class="main-main-w">
+             <span style="color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0.274);">active deposite</span>
+            <i class="bi bi-currency-dollar"></i>
+            <div class="bigx">
+                       <h1>USD <b>0.00</b></h1>
+            <strong>locked</strong> 
+            </div>
+    
+         </div>
+         <div class="bbv09x ">
+
+         
+            <div class="bbv09">
+
+           <h4>
+            
+               submite your KYC for verifications and for account activations 
+           </h4>
+           <button style="background-color: red; color: white;">submite now !!</button>
+        </div>
+            <div class="bbv09">
+<h2>setup your payment</h2>
+           <h4>
+            
+              please add a mode of payment in your setting for ease at transcatting
+           </h4>
+           <button style="background-color: red; color: white;">setup now</button>
+        </div>
+        <div class="bbv09">
+
+       
+        <h4>refer and earn 10% 5% 3% 2% 1%</h4>
+        <h6>your referral link: 
+            <br><a href="">http://GT-invest.com/98887t5645r57</a>
+
+        </h6>
+        <input type="text" name="" id="" placeholder="enter the email address you want refer">
+        <button>invite friend</button>
+    </div>
+       
+            <div class="bbv09 ts-history">
+
+           
+           <BIG class="main0pay">
+               <big class="pay-main0pay">
+            <h4>
+                earning history
+            </h4>
+            <a href="" style="color: red;">detail history </a>
+            </big>
+            <div style="display: flex; width: 100%; justify-content: space-between; font-size: smaller; border-bottom:1px solid rgb(25, 81, 184); padding-bottom: 12px;padding-top: 12px;">
+              <b style="color: black;">TXN </b>
+              <b style="color: black;">amount(USD) </b>
+              <b style="color: black;">date </b>
+            </div>
+
+           </BIG>
+        </div>
+         </div>
+        </div>
+        {% endif %}
+        </main>
+    </div>
+</div>
+</section>
+    </section>
+</div>
+
+    
+    <script src="{% static 'js/dashboard.js"></script>
+</body>
+</html>
+
+   
+
